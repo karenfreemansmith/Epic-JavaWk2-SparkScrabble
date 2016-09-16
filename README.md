@@ -17,13 +17,13 @@ Create a program that allows users to create a dictionary to keep track of vario
 * When viewing a Word, users should also be able to add one or more unique Definitions.
 
 | Behavior | Input | Output |
-|----------------------------|----------------------------------------------|--------------------------------------------------------------------------------------|
+|----------------------------|----------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Game Board with 15x15 grid | new board | rows=15, cols=15 |
-| Squares (on board): |  |  |
+| Squares (on board): |  |![sample board](/board.png)  |
 | - premium | 0,1,2,3,4 | none, double letter score, triple letter score, double word score, triple word score |
 | - location | 1,1 | row=1, column=1 (or A1) |
 | - tile | placeTile | true |
-| Tiles: |  |  |
+| Tiles: | 100 total tiles | 2 blank tiles (scoring 0 points)1 point: E ×12, A ×9, I ×9, O ×8, N ×6, R ×6, T ×6, L ×4, S ×4, U ×42 points: D ×4, G ×33 points: B ×2, C ×2, M ×2, P ×24 points: F ×2, H ×2, V ×2, W ×2, Y ×25 points: K ×18 points: J ×1, X ×110 points: Q ×1, Z ×1 |
 | - value | 1 | 1 |
 | - mark | A | A |
 | - used | drawTile | true |
