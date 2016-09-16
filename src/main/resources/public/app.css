@@ -2,14 +2,6 @@ body {
   background: #f2f2f2;
 }
 
-h1 {
-  text-align: center;
-}
-
-a {
-  color: #008B8B;
-}
-
 .square {
   height: 64px;
   width: 64px;
@@ -20,7 +12,7 @@ a {
 }
 
 .p0 {
-  background: beige;
+  background: rgb(241, 230, 218);
 }
 
 .p1 {
