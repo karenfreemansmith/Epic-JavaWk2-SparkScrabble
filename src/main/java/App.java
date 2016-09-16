@@ -12,14 +12,24 @@ public class App {
 
     get("/", (request, response) -> {
       Map<String, Object> model = new HashMap<String, Object>();
+      model.put("words", Word.all());
       model.put("template", "templates/index.vtl");
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
 
-    get("/result", (request, response) -> {
+    post("/", (request, response) -> {
       Map<String, Object> model = new HashMap<String, Object>();
-      model.put("result", request.queryParams("item1"));
-      model.put("template", "templates/result.vtl");
+      Word newWord = new Word(request.queryParams("word1"));
+      model.put("words", Word.all());
+      model.put("template", "templates/index.vtl");
+      return new ModelAndView(model, layout);
+    }, new VelocityTemplateEngine());
+
+    get("/words/:id", (request, response) -> {
+      Map<String, Object> model = new HashMap<String, Object>();
+      Word word = Word.find(Integer.parseInt(request.params(":id")));
+      model.put("word", word);
+      model.put("template", "templates/word.vtl");
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
 
