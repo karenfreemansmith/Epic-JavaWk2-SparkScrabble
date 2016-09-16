@@ -30,4 +30,13 @@ public class GameTest {
   public void getTiles_returnsAllTiles_100() {
     assertEquals(100, myGame.getTiles().length);
   }
+
+  @Test
+  public void addPlayers_returnsAllPlayers_2() {
+    Player.clear();
+    Player player1 = new Player("Fred");
+    Player player2 = new Player("Barney");
+    myGame.addPlayers(Player.all());
+    assertEquals(2, myGame.getPlayers().size());
+  }
 }

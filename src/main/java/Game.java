@@ -1,6 +1,10 @@
+import java.util.List;
+import java.util.ArrayList;
+
 public class Game {
   private Square mSquares[][] = new Square[15][15];
   private Tile mTiles[] = new Tile[100];
+  private List<Player> mPlayers;
 
   public Game() {
     //setup squares on board
@@ -125,5 +129,13 @@ public class Game {
 
   public Tile[] getTiles() {
     return mTiles;
+  }
+
+  public void addPlayers(List<Player> players) {
+    mPlayers = players;
+  }
+
+  public List<Player> getPlayers() {
+    return mPlayers;
   }
 }
