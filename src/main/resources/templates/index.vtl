@@ -14,24 +14,28 @@
   </div>
   <div class="col-xs-1">
     <h2>Players</2>
+
     #foreach($player in $players)
       <h4><a href="/players/$player.getPlayerId()">$player.getPlayerName()</a></h4>
     #end
 
-    <h23>Add Player: </h3>
+    #if(!$game.isStarted())
+    <h3>Add Player: </h3>
+    <p>(4 players needed to start game)</p>
     <form action='/' method='post'>
       <div class="form-group">
         <label for="playerName">Player name: </label>
         <input id="playerName" name="playerName" type="text">
       </div>
-      <button type='submit' class='btn btn-default'>Add Player!</button>
+      <button type='submit' class='btn btn-info'>Add Player!</button>
     </form>
+    #else
+    <h3>Current Player: </h3>
+    <p>Shows tiles here...</p>
+    #end
 
     <h3>Play Scrabble</h3>
-    <form action="/">
-      <input type="hidden" name="start" id="start" value="start">
-      <button type='submit' class='btn btn-info'>Start Game!</button>
-    </form>
+
     <h4><a href="/words">Check Dictionary</a></h4>
 
 </div>

@@ -15,10 +15,6 @@ public class App {
 
     get("/", (request, response) -> {
       Map<String, Object> model = new HashMap<String, Object>();
-      if(request.queryParams("start")) {
-        game.addPlayers();
-        game.startGame();
-      }
       model.put("game", game);
       model.put("players", Player.all());
       model.put("template", "templates/index.vtl");
@@ -29,6 +25,10 @@ public class App {
       Map<String, Object> model = new HashMap<String, Object>();
       model.put("game", game);
       Player newWord = new Player(request.queryParams("playerName"));
+      if(Player.all().size()==4) {
+        game.addPlayers(Player.all());
+        game.startGame();
+      }
       model.put("players", Player.all());
       model.put("template", "templates/index.vtl");
       return new ModelAndView(model, layout);

@@ -5,8 +5,10 @@ public class Game {
   private Square mSquares[][] = new Square[15][15];
   private Tile mTiles[] = new Tile[100];
   private List<Player> mPlayers;
+  private boolean inProgress;
 
   public Game() {
+    inProgress = false;
     //setup squares on board
     for(int i=0; i<=14; i++) {
       for(int j=0; j<=14; j++) {
@@ -137,5 +139,13 @@ public class Game {
 
   public List<Player> getPlayers() {
     return mPlayers;
+  }
+
+  public void startGame() {
+    inProgress=true;
+  }
+
+  public boolean isStarted() {
+    return inProgress;
   }
 }
