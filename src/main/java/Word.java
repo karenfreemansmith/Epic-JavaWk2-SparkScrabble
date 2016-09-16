@@ -18,6 +18,10 @@ public class Word {
     return mWord;
   }
 
+  public int getId() {
+    return mId;
+  }
+
   public void addDefinition(Definition newDef) {
     mDefinitions.add(newDef);
   }
