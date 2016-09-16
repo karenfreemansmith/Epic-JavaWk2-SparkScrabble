@@ -1,12 +1,55 @@
-# Project Title
-Version 0.0.0: September 13, 2016
+# Scrabble Dictionary
+Version 0.0.0: September 16, 2016
 
 by [Karen Freeman-Smith](https://github.com/karenfreemansmith)
 
 ## Description
-A program to ...
+Final Project for Week 2, Java at Epicodus. Build a dictionary using Java & Spark with JUnit tests and RESTful routing.
 
 ### Specifications
+Create a program that allows users to create a dictionary to keep track of various words and their multiple definitions.
+
+* Make two classes:
+  * One for Word
+  * One for Definition
+* The homepage of the app should list all Words, and allow users to click a Word to view all its Definitions.
+* A user should be able to add their own Word to the dictionary.
+* When viewing a Word, users should also be able to add one or more unique Definitions.
+
+| Behavior | Input | Output |
+|----------------------------|----------------------------------------------|--------------------------------------------------------------------------------------|
+| Game Board with 15x15 grid | new board | rows=15, cols=15 |
+| Squares (on board): |  |  |
+| - premium | 0,1,2,3,4 | none, double letter score, triple letter score, double word score, triple word score |
+| - location | 1,1 | row=1, column=1 (or A1) |
+| - tile | placeTile | true |
+| Tiles: |  |  |
+| - value | 1 | 1 |
+| - mark | A | A |
+| - used | drawTile | true |
+| Player: |  |  |
+| - tiles | getTiles, placeTile, drawTile | 7, -1, +1 |
+| - words | turn | adds word to list |
+| - score | start, end_turn | 0, +word score |
+| Word: |  |  |
+| - name | "word" | "word" |
+| - definitions | "a unit of a language", "a turn in scrabble" | "a unit of a language", "a turn in scrabble" |
+| - score | "word" | (4+1+1+2)=8 |
+
+Objectives:
+* An instance of one class appears in the method of another class (ie: Objects are successfully saved within other objects).
+* Spark routes process GET and POST requests/responses successfully
+* Spark routes follow RESTful conventions.
+* All previous code review standards have been met (see below)
+* If prompted, you are able to discuss the flow of your code and concepts behind it with an instructor using the correct terminology.
+* Project is in a polished, portfolio-quality state.
+* Application works as expected.
+* Tests have complete coverage for all behaviors.
+* All tests are formatted correctly and pass.
+* Classes are encapsulated and getter methods are used to access properties.
+* Logic is easy to understand.
+* Build files are discluded from Git using a .gitignore file.
+* Code and Git documentation follows best practices (descriptive variables names, proper indentation and spacing, separation between front and back-end logic, detailed commit messages in the correct tense, and a well-formatted README).
 
 ## Setup/Installation
 * Clone directory
