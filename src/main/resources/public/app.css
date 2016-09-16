@@ -15,6 +15,8 @@ a {
   width: 64px;
   border: solid black 1px;
   float: left;
+  font-size: 48px;
+  text-align: center;
 }
 
 .p0 {
@@ -22,17 +24,17 @@ a {
 }
 
 .p1 {
-  background: cyan;
+  background: rgb(179, 255, 255);
 }
 
 .p2 {
-  background: blue;
+  background: rgb(128, 191, 255);
 }
 
 .p3 {
-  background: pink;
+  background: rgb(255, 230, 242);
 }
 
 .p4 {
-  background: red;
+  background: rgb(255, 123, 123);
 }

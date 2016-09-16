@@ -20,4 +20,14 @@ public class GameTest {
     //checks that the last square created (14,14) has the triple word premium (4)
     assertEquals(4, myGame.getSquare(14,14).getPremium());
   }
+
+  @Test
+  public void getSquares_returnsAllSquares_15() {
+    assertEquals(15, myGame.getSquares().length);
+  }
+
+  @Test
+  public void getTiles_returnsAllTiles_100() {
+    assertEquals(100, myGame.getTiles().length);
+  }
 }

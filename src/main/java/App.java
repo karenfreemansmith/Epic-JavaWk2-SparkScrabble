@@ -23,6 +23,7 @@ public class App {
 
     post("/", (request, response) -> {
       Map<String, Object> model = new HashMap<String, Object>();
+      model.put("game", game);
       Player newWord = new Player(request.queryParams("playerName"));
       model.put("players", Player.all());
       model.put("template", "templates/index.vtl");

@@ -31,7 +31,7 @@ public class Square {
     (mRow==3&&mCol==0)||(mRow==3&&mCol==7)||(mRow==3&&mCol==14)||
     (mRow==6&&mCol==2)||(mRow==6&&mCol==6)||(mRow==6&&mCol==8)||(mRow==6&&mCol==12)||
     (mRow==7&&mCol==3)||(mRow==7&&mCol==11)||
-    (mRow==8&&mCol==2)||(mRow==8&&mCol==7)||(mRow==8&&mCol==8)||(mRow==8&&mCol==12)||
+    (mRow==8&&mCol==2)||(mRow==8&&mCol==6)||(mRow==8&&mCol==8)||(mRow==8&&mCol==12)||
     (mRow==11&&mCol==0)||(mRow==11&&mCol==7)||(mRow==11&&mCol==14)||
     (mRow==12&&mCol==6)||(mRow==12&&mCol==8)||
     (mRow==14&&mCol==3)||(mRow==14&&mCol==11)

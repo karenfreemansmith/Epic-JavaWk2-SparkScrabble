@@ -119,4 +119,11 @@ public class Game {
     return mSquares[row][col];
   }
 
+  public Square[][] getSquares() {
+    return mSquares;
+  }
+
+  public Tile[] getTiles() {
+    return mTiles;
+  }
 }
