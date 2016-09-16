@@ -21,7 +21,7 @@
 
     #if(!$game.isStarted())
     <h3>Add Player: </h3>
-    <p>(4 players needed to start game)</p>
+    <p>(you need 4 players to start game)</p>
     <form action='/' method='post'>
       <div class="form-group">
         <label for="playerName">Player name: </label>
@@ -30,11 +30,16 @@
       <button type='submit' class='btn btn-info'>Add Player!</button>
     </form>
     #else
-    <h3>Current Player: </h3>
-    <p>Shows tiles here...</p>
+    <h3>$game.getCurrentPlayer().getPlayerName()'s Turn: </h3>
+    #foreach($tile in $game.getCurrentPlayer().getSquares())
+    <div class="square p0">
+      $tile.getMark();
+    </div>
+    #end
+    <p><a href="/">End Turn</a><p>
     #end
 
-    <h3>Play Scrabble</h3>
+    <h3>Challenge</h3>
 
     <h4><a href="/words">Check Dictionary</a></h4>
 

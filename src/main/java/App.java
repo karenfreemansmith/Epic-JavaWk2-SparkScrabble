@@ -15,6 +15,9 @@ public class App {
 
     get("/", (request, response) -> {
       Map<String, Object> model = new HashMap<String, Object>();
+      if(game.isStarted()) {
+        game.endTurn();
+      }
       model.put("game", game);
       model.put("players", Player.all());
       model.put("template", "templates/index.vtl");
