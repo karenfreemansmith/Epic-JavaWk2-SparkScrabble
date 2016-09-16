@@ -25,4 +25,16 @@ public class WordTest {
     myWord.addDefinition(myDef2);
     assertEquals(2, myWord.getDefinitions().size());
   }
+
+  @Test
+  public void all_returnsListAllWords_2() {
+    Word myWord1 = new Word("dog");
+    Word myWord2 = new Word("cat");
+    assertEquals(2, Word.all().size());
+  }
+
+  @After
+  public void tearDown() {
+    Word.clear();
+  }
 }
