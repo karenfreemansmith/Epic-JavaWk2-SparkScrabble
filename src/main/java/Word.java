@@ -5,11 +5,13 @@ public class Word {
   private String mWord;
   private static List<Word> instances = new ArrayList<Word>();
   private List<Definition> mDefinitions;
+  private int mId;
 
   public Word(String text) {
     mWord=text;
     mDefinitions=new ArrayList<Definition>();
     instances.add(this);
+    mId=instances.size();
   }
 
   public String getWord() {
@@ -22,6 +24,10 @@ public class Word {
 
   public List<Definition> getDefinitions() {
     return mDefinitions;
+  }
+
+  public static Word find(int id) {
+    return instances.get(id-1);
   }
 
   public static List<Word> all() {

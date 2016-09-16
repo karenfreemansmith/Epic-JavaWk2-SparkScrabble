@@ -33,6 +33,13 @@ public class WordTest {
     assertEquals(2, Word.all().size());
   }
 
+  @Test
+  public void find_returnsCorrectWord_cat() {
+    Word myWord1 = new Word("dog");
+    Word myWord2 = new Word("cat");
+    assertEquals("cat", Word.find(2).getWord());
+  }
+
   @After
   public void tearDown() {
     Word.clear();
