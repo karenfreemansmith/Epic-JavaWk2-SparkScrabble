@@ -9,6 +9,15 @@ Final Project for Week 2, Java at Epicodus. Build a dictionary using Java & Spar
 ### Specifications
 Create a program that allows users to create a dictionary to keep track of various words and their multiple definitions.
 
+| Behavior                               | Input                                      | Output                                     |
+|----------------------------------------|--------------------------------------------|--------------------------------------------|
+| Creates a word                         | "dog"                                      | "dog"                                      |
+| Creates a definition                   | "an animal that barks"                     | "an animal that barks"                     |
+| Stores multiple definitions for a word | "an animal that barks", "derogatory slang" | "an animal that barks", "derogatory slang" |
+|                                        |                                            |                                            |
+|                                        |                                            |                                            |
+|                                        |                                            |                                            |
+
 * Make two classes:
   * One for Word
   * One for Definition
