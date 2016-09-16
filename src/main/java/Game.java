@@ -6,6 +6,7 @@ public class Game {
   private Tile mTiles[] = new Tile[100];
   private List<Player> mPlayers;
   private boolean inProgress;
+  private int mCurrent;
 
   public Game() {
     inProgress = false;
@@ -143,9 +144,23 @@ public class Game {
 
   public void startGame() {
     inProgress=true;
+    mCurrent=0;
   }
 
   public boolean isStarted() {
     return inProgress;
   }
+
+  public Player getCurrentPlayer() {
+    return mPlayers.get(mCurrent);
+  }
+
+  public void endTurn() {
+    if(mCurrent<3) {
+      mCurrent++;
+    } else {
+      mCurrent=0;
+    }
+  }
+
 }
