@@ -9,3 +9,30 @@ h1 {
 a {
   color: #008B8B;
 }
+
+.square {
+  height: 64px;
+  width: 64px;
+  border: solid black 1px;
+  float: left;
+}
+
+.p0 {
+  background: beige;
+}
+
+.p1 {
+  background: cyan;
+}
+
+.p2 {
+  background: blue;
+}
+
+.p3 {
+  background: pink;
+}
+
+.p4 {
+  background: red;
+}

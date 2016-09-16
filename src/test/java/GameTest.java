@@ -1,0 +1,23 @@
+import org.junit.*;
+import static org.junit.Assert.*;
+
+public class GameTest {
+  private Game myGame = new Game();
+
+  @Test
+  public void Game_instantiatesCorrectly_true() {
+    assertEquals(true, myGame instanceof Game);
+  }
+
+  @Test
+  public void Game_instantiates100TilesCorrectly_Z() {
+    //checks that last tile created is in the last spot of array of 100
+    assertEquals('Z', myGame.getTile(100).getMark());
+  }
+
+  @Test
+  public void Game_instantiatesSquaresCorrectly_4() {
+    //checks that the last square created (14,14) has the triple word premium (4)
+    assertEquals(4, myGame.getSquare(14,14).getPremium());
+  }
+}

@@ -1,0 +1,18 @@
+<div class="row">
+  <div class="col-xs-9">
+    <h2>All Words</h2>
+    #foreach($word in $words)
+      <h4><a href="/words/$word.getId()">$word.getWord()</a></h4>
+    #end
+  </div>
+  <div class="col-xs-3">
+    <h2>Add Word: </h2>
+    <form action='/words' method='post'>
+      <div class="form-group">
+        <label for="word1">Your Word: </label>
+        <input id="word1" name="word1" class="form-control" type="text">
+      </div>
+      <button type='submit' class='btn'>Add Word!</button>
+    </form>
+  </div>
+</div>
