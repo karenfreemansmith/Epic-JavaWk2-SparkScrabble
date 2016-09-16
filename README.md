@@ -16,6 +16,16 @@ Create a program that allows users to create a dictionary to keep track of vario
 * A user should be able to add their own Word to the dictionary.
 * When viewing a Word, users should also be able to add one or more unique Definitions.
 
+### Further Exploration: scrabble
+Game Play:
+* Player order determined by drawing one tile, first letter in alphabet goes first (blank beats A)
+* Each player draws 7 tiles to fill rack
+* Turn options:
+  * Pass (turn ends, scores 0)
+  * Exchange tiles (any number of tiles may be returned, equal number drawn to replace them)
+  * Play one or more tiles (score from all words formed added to total score)
+  * Opposing players may challenge a word played, if not legitimate, word is removed and turn forfieted, otherwise challenging player loses next turn.
+
 | Behavior | Input | Output |
 |----------------------------|----------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Game Board with 15x15 grid | new board | rows=15, cols=15 |
