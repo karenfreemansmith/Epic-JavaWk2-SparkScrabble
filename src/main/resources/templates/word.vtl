@@ -1,1 +1,21 @@
-<h1>$word</h1>
+<div class="row">
+  <div class="col-xs-9">
+    <h2>$word.getWord()</h2>
+    <ol>
+    #foreach($def in $word.getDefinitions())
+      <li>$def.getDefinition()</li>
+    #end
+    </ol>
+  </div>
+  <div class="col-xs-3">
+    <h2>Add a definition for $word.getWord(): </h2>
+    <form action='/words/$word.getId()' method='post'>
+      <div class="form-group">
+        <label for="def1">Your definition: </label>
+        <input id="def1" name="def1" class="form-control" type="text">
+      </div>
+
+      <button type='submit' class='btn'>Add Definition!</button>
+    </form>
+  </div>
+</div>
