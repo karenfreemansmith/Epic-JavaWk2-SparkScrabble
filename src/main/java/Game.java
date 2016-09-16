@@ -1,12 +1,15 @@
 import java.util.List;
 import java.util.ArrayList;
+import java.util.Random;
 
 public class Game {
   private Square mSquares[][] = new Square[15][15];
   private Tile mTiles[] = new Tile[100];
   private List<Player> mPlayers;
+  private List<Tile> mTilePool;
   private boolean inProgress;
   private int mCurrent;
+  private Random mRandom = new Random();
 
   public Game() {
     inProgress = false;
@@ -145,6 +148,21 @@ public class Game {
   public void startGame() {
     inProgress=true;
     mCurrent=0;
+    // for(Tile t:mTiles) {
+    //   mTilePool.add(t);
+    // }
+
+    // for(int i=0; i<7; i++) {
+    //   for(int j=0; j<mPlayers.size(); j++) {
+    //     Tile t = mTilePool.get(mRandom.nextInt(mTilePool.size()));
+    //     mPlayers.get(j).drawTile(t);
+    //   }
+    // }
+
+  }
+
+  public List<Tile> getTilePool() {
+    return mTilePool;
   }
 
   public boolean isStarted() {

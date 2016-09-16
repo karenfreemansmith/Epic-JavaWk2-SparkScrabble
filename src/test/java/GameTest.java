@@ -39,4 +39,16 @@ public class GameTest {
     myGame.addPlayers(Player.all());
     assertEquals(2, myGame.getPlayers().size());
   }
+
+
+    @Test
+    public void startGame_addsTilesToPlayer_7() {
+      Player.clear();
+      Player player1 = new Player("Fred");
+      Player player2 = new Player("Barney");
+      myGame.addPlayers(Player.all());
+      myGame.startGame();
+      assertEquals("tiles in pool wrong", 100, myGame.getTilePool().size());
+      assertEquals("player tiles wrong", 2, player1.viewTiles().size());
+    }
 }
