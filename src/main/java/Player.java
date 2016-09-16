@@ -5,6 +5,8 @@ public class Player {
   private String mName;
   private static List<Player> instances = new ArrayList<Player>();
   private int mId;
+  private List<Tile> mRack = new ArrayList<Tile>();
+
 
   public Player(String name) {
     mName=name;
@@ -30,5 +32,19 @@ public class Player {
 
   public static void clear() {
     instances.clear();
+  }
+
+  public void drawTile(Tile t) {
+    mRack.add(t);
+  }
+
+  public Tile placeTile(int id) {
+    Tile t = mRack.get(id);
+    mRack.remove(id);
+    return t;
+  }
+
+  public List<Tile> viewTiles() {
+    return mRack;
   }
 }

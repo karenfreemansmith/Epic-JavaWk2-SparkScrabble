@@ -25,6 +25,33 @@ public class PlayerTest {
     assertEquals("Barney", Player.find(2).getPlayerName());
   }
 
+  @Test
+  public void drawTile_addsTileToList_2() {
+    Tile tile1 = new Tile('A',1);
+    Tile tile2 = new Tile('Z',10);
+    newPlayer.drawTile(tile1);
+    newPlayer.drawTile(tile2);
+    assertEquals(2, newPlayer.viewTiles().size());
+  }
+
+  @Test
+  public void placeTile_returnsTile_true() {
+    Tile tile1 = new Tile('A',1);
+    Tile tile2 = new Tile('Z',10);
+    newPlayer.drawTile(tile1);
+    newPlayer.drawTile(tile2);
+    assertEquals(true, newPlayer.placeTile(1) instanceof Tile);
+  }
+
+  @Test
+  public void placeTile_returnsExpectedTile_A() {
+    Tile tile1 = new Tile('A',1);
+    Tile tile2 = new Tile('Z',10);
+    newPlayer.drawTile(tile1);
+    newPlayer.drawTile(tile2);
+    assertEquals('A', newPlayer.placeTile(0).getMark());
+  }
+
   @After
   public void tearDown() {
     Player.clear();
