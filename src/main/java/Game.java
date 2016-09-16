@@ -4,9 +4,9 @@ public class Game {
 
   public Game() {
     //setup squares on board
-    for(int i=0; i<=15; i++) {
-      for(int j=0; j<=15; j++) {
-        //mSquares[i][j] = new Square();
+    for(int i=0; i<=14; i++) {
+      for(int j=0; j<=14; j++) {
+        mSquares[i][j] = new Square(i,j);
       }
     }
     //set up tiles
@@ -113,6 +113,10 @@ public class Game {
 
   public Tile getTile(int id) {
     return mTiles[id-1];
+  }
+
+  public Square getSquare(int row, int col) {
+    return mSquares[row][col];
   }
 
 }
