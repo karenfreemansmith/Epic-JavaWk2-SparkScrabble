@@ -11,9 +11,11 @@ public class App {
   public static void main(String[] args) {
     staticFileLocation("/public");
     String layout = "templates/layout.vtl";
+    Game game = new Game();
 
     get("/", (request, response) -> {
       Map<String, Object> model = new HashMap<String, Object>();
+      model.put("game", game);
       model.put("players", Player.all());
       model.put("template", "templates/index.vtl");
       return new ModelAndView(model, layout);
@@ -24,6 +26,14 @@ public class App {
       Player newWord = new Player(request.queryParams("playerName"));
       model.put("players", Player.all());
       model.put("template", "templates/index.vtl");
+      return new ModelAndView(model, layout);
+    }, new VelocityTemplateEngine());
+
+    get("/players/:id", (request, response) -> {
+      Map<String, Object> model = new HashMap<String, Object>();
+      Player player = Player.find(Integer.parseInt(request.params(":id")));
+      model.put("player", player);
+      model.put("template", "templates/player.vtl");
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
 
