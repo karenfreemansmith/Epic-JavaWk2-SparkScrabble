@@ -20,6 +20,11 @@ public class PlayerTest {
     assertEquals(2, Player.all().size());
   }
 
+  @Test
+  public void find_returnsCorrectPlayer_Barney() {
+    assertEquals("Barney", Player.find(2).getPlayerName());
+  }
+
   @After
   public void tearDown() {
     Player.clear();
