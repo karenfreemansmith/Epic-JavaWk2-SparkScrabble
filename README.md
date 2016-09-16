@@ -4,7 +4,7 @@ Version 0.0.0: September 16, 2016
 by [Karen Freeman-Smith](https://github.com/karenfreemansmith)
 
 ## Description
-Final Project for Week 2, Java at Epicodus. Build a dictionary using Java & Spark with JUnit tests and RESTful routing.
+Final Project for Week 2, Java at Epicodus. Build a dictionary using Java & Spark with JUnit tests and RESTful routing. (you can view original submission on "original-submission" branch)
 
 ### Specifications
 Create a program that allows users to create a dictionary to keep track of various words and their multiple definitions.
