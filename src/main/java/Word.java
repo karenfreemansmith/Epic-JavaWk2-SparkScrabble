@@ -1,5 +1,6 @@
 import java.util.List;
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Word {
   private String mWord;
@@ -35,6 +36,7 @@ public class Word {
   }
 
   public static List<Word> all() {
+    Collections.sort(instances, (word1, word2) ->  word1.mWord.compareTo(word2.mWord));
     return instances;
   }
 
