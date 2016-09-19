@@ -36,7 +36,9 @@ public class Word {
   }
 
   public static List<Word> all() {
-    Collections.sort(instances, (word1, word2) ->  word1.mWord.compareTo(word2.mWord));
+    //Sort works, but breaks find - not able to refactor find to search by id without
+    //adding new word, trying to remove a temp word caused 500 error...
+    //Collections.sort(instances, (word1, word2) ->  word1.mWord.compareTo(word2.mWord));
     return instances;
   }
 
